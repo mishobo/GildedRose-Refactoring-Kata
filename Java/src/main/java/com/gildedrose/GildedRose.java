@@ -4,10 +4,12 @@ class GildedRose {
 
     Item[] items;
 
+    // dependency injection using constructor method
     public GildedRose(Item[] items) {
         this.items = items;
     }
 
+    // update quality method
     public void updateQuality() {
 
         // loop through the array
