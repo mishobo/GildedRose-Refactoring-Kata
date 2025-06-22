@@ -5,16 +5,25 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 class GildedRoseTest {
 
     @DisplayName("nameStaysTheSameWhenUpdatingQuality")
     @Test
     void foo() {
-        Item[] items = new Item[] { new Item("foo", 0, 0) };
+        Item[] items = new Item[] {
+            new Item("foo", 0, 0) ,
+            new Item("Aged Brie", 0, 0) ,
+            new Item("Sulfuras, Hand of Ragnaros", 0, 0) ,
+            new Item("Backstage passes to a TAFKAL80ETC concert", 0, 0) ,
+            new Item("Conjured Mana Cake", 0, 0)
+        };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
 
         assertEquals("foo", app.items[0].name);
+        assertEquals("Aged Brie", app.items[1].name);
+        assertEquals("Aged Brie", app.items[1].name);
     }
 
     @DisplayName("lower sellIn at the end of day")
@@ -109,6 +118,15 @@ class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals(23, app.items[0].quality);
+    }
+
+
+    @Test
+    void testUpdateQuality_whenPassedConcertDate_QualityDropsToZero(){
+        Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert", -1, 20) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(0, app.items[0].quality);
     }
 
 

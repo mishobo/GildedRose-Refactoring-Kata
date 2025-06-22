@@ -21,3 +21,17 @@
                    * Version control
 
 - In my opinion, Test, DRY, KISS, Comments for documentation will apply here.
+
+* What is refactoring?
+- Based on Robert C Martins blog post-27 May 2013, The Transformation Priority Premise.
+- Refactoring is simple operations that change the structure of code without changing its behavior.
+- Transformations are simple operations that change the behavior of code.
+- Transformations can be used as the sole means for passing the currently failing test in the red/green/refactor cycle.
+
+“As the tests get more specific, the code gets more generic.”
+
+### Code Smell
+- tangible and observable violations of code design/development fundamentals that could eventually lead to poor code quality and technical debt.
+
+### Technical debt:
+- the cost of rework is caused by choosing quicker, easier solutions over more optimal ones in software development.
