@@ -48,7 +48,7 @@ class GildedRoseTest {
     @DisplayName("quality degrades twice as fast after sellIn date passes")
     @Test
     void testUpdateQuality_whenSellByDatePasses_qualityDegradesTwiceAsFast(){
-        Item[] items = new Item[] { new Item("foo", 0, 50) };
+        Item[] items = new Item[] { new Item("foo", -1, 50) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
         assertEquals(48, app.items[0].quality);

@@ -35,3 +35,6 @@
 
 ### Technical debt:
 - the cost of rework is caused by choosing quicker, easier solutions over more optimal ones in software development.
+
+- In our experience, the programs that live best and longest are those with short functions.
+-- Martin Fowler and Kent Beck
